@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: resume-screener-email-service
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: EMAIL_SERVICE_PORT
+        value: "10000"
+      - key: MAIL_SERVER
+        value: smtp.gmail.com
+      - key: MAIL_PORT
+        value: "587"
+      - key: MAIL_USE_SSL
+        value: "false"
+      - key: MAIL_USERNAME
+        sync: false
+      - key: MAIL_PASSWORD
+        sync: false

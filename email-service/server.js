@@ -14,7 +14,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-const PORT = process.env.EMAIL_SERVICE_PORT || 5001;
+const PORT = process.env.PORT || process.env.EMAIL_SERVICE_PORT || 5001;
 
 // ── Middleware ────────────────────────────────────────────────────────────────
 app.use(cors());
