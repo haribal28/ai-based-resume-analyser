@@ -12,7 +12,7 @@ import JobUpload from '../components/Admin/JobUpload';
 import CandidateRanking from '../components/Admin/CandidateRanking';
 import CourseManagement from '../components/Admin/CourseManagement';
 
-const EMAIL_SERVICE = 'http://localhost:5001';
+
 
 // ─── Offer / Rejection Email Panel ───────────────────────────────────────────
 function OfferEmailPanel({ jobs }) {

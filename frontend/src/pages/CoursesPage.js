@@ -402,7 +402,7 @@ function CourseCard({ course, onOpen }) {
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 export default function CoursesPage() {
-    const { user } = useAuth();
+    useAuth();
     const [courses, setCourses] = useState([]);
     const [loading, setLoading] = useState(true);
     const [detail, setDetail] = useState(null);

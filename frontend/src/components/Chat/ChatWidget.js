@@ -156,7 +156,6 @@ function MessageThread({ conversation, onBack, currentUser }) {
                     <div style={s.emptyMsg}>No messages yet. Say hello! 👋</div>
                 ) : (
                     messages.map(m => {
-                        const isMe = m.sender_id === currentUser?.id || m.sender_role === currentUser?.role;
                         const mine = m.sender_role === currentUser?.role;
                         return (
                             <div key={m.id} style={{ ...s.msgRow, justifyContent: mine ? 'flex-end' : 'flex-start' }}>
