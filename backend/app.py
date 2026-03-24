@@ -42,8 +42,13 @@ def create_app():
     # Ensure upload folder exists
     os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
 
-    # CORS
-    CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True)
+    # CORS — allow Vercel frontend + localhost dev
+    CORS(app, resources={r"/api/*": {"origins": [
+        "http://localhost:3000",
+        "https://ai-based-resume-analyser-one.vercel.app",
+        "https://ai-based-resume-analyser-bhh22tpe7.vercel.app",
+        "https://ai-based-resume-analyser-git-main-hariharanbala28-4934s.vercel.app",
+    ]}}, supports_credentials=True)
 
     # Init extensions
     mail.init_app(app)
