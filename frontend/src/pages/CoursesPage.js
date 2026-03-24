@@ -91,8 +91,8 @@ function CourseDetail({ course: initialCourse, onBack, onEnrolled }) {
         setDownloading(true); setMsg('');
         try {
             const token = localStorage.getItem('token');
-            const API = process.env.REACT_APP_API_URL || 'http://localhost:5000';
-            const resp = await fetch(`${API}/api/courses/${course.id}/certificate`, {
+            const API = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+            const resp = await fetch(`${API}/courses/${course.id}/certificate`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
 

@@ -1,6 +1,9 @@
 {
   "buildCommand": "cd frontend && npm install && npm run build",
   "outputDirectory": "frontend/build",
+  "env": {
+    "REACT_APP_API_URL": "https://resume-screener-backend-axv2.onrender.com/api"
+  },
   "rewrites": [
     {
       "source": "/(.*)",
